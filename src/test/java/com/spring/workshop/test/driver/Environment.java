@@ -7,5 +7,5 @@ public final class Environment {
     /**
      * Variable used for defining on which browser to run the test scenario
      */
-    public static final Browser BROWSER = Browser.FIREFOX;
+    public static final Browser BROWSER = Browser.CHROME;
 }
