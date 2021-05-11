@@ -7,12 +7,15 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import com.spring.workshop.test.pageObjects.DemoPageObject;
 import org.openqa.selenium.WebDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class DemoSteps {
 
     public static final WebDriver webDriver = DriverService.WEB_DRIVER_INSTANCE;
 
-    private final DemoPageObject demoPageObject = new DemoPageObject(webDriver);
+    //private final DemoPageObject demoPageObject = new DemoPageObject(webDriver);
+
+    @Autowired DemoPageObject demoPageObject;
 
     @Given("I navigate to Selenium Easy web page")
     public void openWebPage() {

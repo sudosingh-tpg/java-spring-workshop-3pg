@@ -17,6 +17,7 @@
         <cucumber-version>6.9.0</cucumber-version>
         <junit-version>4.13.1</junit-version>
         <selenium-version>3.141.59</selenium-version>
+        <spring-version>5.3.1</spring-version>
         <maven-surefire-version>3.0.0-M5</maven-surefire-version>
     </properties>
 
@@ -79,6 +80,28 @@
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>4.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>${cucumber-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring-version}</version>
         </dependency>
 
         <!-- base dependencies -->
