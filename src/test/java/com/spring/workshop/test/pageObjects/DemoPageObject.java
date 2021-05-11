@@ -1,5 +1,6 @@
 package com.spring.workshop.test.pageObjects;
 
+import com.spring.workshop.test.driver.DriverService;
 import com.spring.workshop.test.utils.WaitHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,6 +36,15 @@ public class DemoPageObject {
     private WebElement displayedTextSingleInputField;
 
     private final By singleInputFormHeader = By.xpath("//div[text()='Single Input Field']");
+
+    public DemoPageObject() {
+        if (DriverService.WEB_DRIVER_INSTANCE == null) {
+            DriverService.setup();
+        }
+        this.driver = DriverService.WEB_DRIVER_INSTANCE;
+        PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, 10);
+    }
 
     public DemoPageObject(WebDriver driver) {
         this.driver = driver;
